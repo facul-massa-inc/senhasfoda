@@ -12,6 +12,7 @@
     let strengthChecks: {[id: string]: StrengthCheck} = {
         hasUppercase: { name: "Letra maiúscula", check: (pass: string) => /[A-Z]/.test(pass) },
         hasLowercase: { name: "Letra minúscula", check: (pass: string) => /[a-z]/.test(pass) },
+        hasNumber: { name: "Tem número", check: (pass: string) => /[0-9]/.test(pass) },
         hasSpecial: { name: "Caractere especial", check: (pass: string) => /[^A-Za-z0-9]/.test(pass) },
         isLongEnough:  { name: "No mínimo 8 caracteres", check: (pass: string) => pass.length >= 8 },
     };
